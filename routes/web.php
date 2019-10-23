@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dictionary', function (){
+    return view("show_dictionary");
+});
+Route::post('/dictionary', "dictionaryController@translate")->name('dictionary');
+
